@@ -98,7 +98,7 @@ input, select, textarea {
 	}
 
 	body {
-		background: #312450;
+		background: #F1F6F3; /**main background*/
 	}
 
 		body.is-preload *, body.is-preload *:before, body.is-preload *:after {
@@ -197,10 +197,10 @@ input, select, textarea {
 		}
 
 			h1.major:after {
-				background-image: -moz-linear-gradient(to right, #5e42a6, #b74e91);
-				background-image: -webkit-linear-gradient(to right, #5e42a6, #b74e91);
-				background-image: -ms-linear-gradient(to right, #5e42a6, #b74e91);
-				background-image: linear-gradient(to right, #5e42a6, #b74e91);
+				background-image: -moz-linear-gradient(to right, #ffc039, #ffc039);
+				background-image: -webkit-linear-gradient(to right, #ffc039, #ffc039);
+				background-image: -ms-linear-gradient(to right, #ffc039, #ffc039);
+				background-image: linear-gradient(to right, #ffc039, #ffc039);
 				-moz-transition: max-width 0.2s ease;
 				-webkit-transition: max-width 0.2s ease;
 				-ms-transition: max-width 0.2s ease;
@@ -1795,19 +1795,75 @@ input, select, textarea {
 
 		}
 
+
+
+	ul.special {
+		list-style: none;
+		padding-left: 5em;
+		cursor: default;
+		position: relative;
+		margin: 0 0 4em -2em;
+        background-color: #4E4144 /**special*/
+	}
+
+		ul.special li {
+			-moz-transition: top .15s ease-in-out;
+			-webkit-transition: top .15s ease-in-out;
+			-ms-transition: top .15s ease-in-out;
+			transition: top .15s ease-in-out;
+			position: relative;
+			display: inline-block;
+			top: 0;
+			padding: 2em 5em 0 0em;
+
+		}
+
+			ul.special li a {
+				display: block;
+				outline: 0;
+			}
+
+				ul.special li a:before {
+					-moz-transition: background-color .2s ease-in-out;
+					-webkit-transition: background-color .2s ease-in-out;
+					-ms-transition: background-color .2s ease-in-out;
+					transition: background-color .2s ease-in-out;
+					display: block;
+					text-align: center;
+					background: #66645a; /**icon background*/
+					border-radius: 100%;
+					width: 2.25em;
+					height: 2.25em;
+					line-height: 2.175em;
+					font-size: 5em;
+					color: #ffffff; /**icon color*/
+				}
+
+			ul.special li:hover {
+				top: -1em;
+			}
+
+				ul.special li:hover a:before {
+					background: #66645a;
+				}
+
+
+
+
+
 /* Box */
 
 	.box {
-		border-radius: 0.25em;
-		border: solid 1px rgba(255, 255, 255, 0.15);
-		margin-bottom: 2em;
+		/** border: solid 1px rgba(255, 255, 255, 0.15); this is the 1 px white border*/
+        border-bottom: solid .25em rgba(255,192,57,1);
+		margin-bottom: 0em;
 		padding: 1.5em;
 	}
 
 		.box > :last-child,
 		.box > :last-child > :last-child,
 		.box > :last-child > :last-child > :last-child {
-			margin-bottom: 0;
+			margin-bottom: 0; /**put a gap between elements*/
 		}
 
 		.box.alt {
@@ -2444,7 +2500,6 @@ input, select, textarea {
 		input[type="radio"]:checked + label:before {
 			background: #ffffff;
 			border-color: #ffffff;
-			color: #b74e91;
 			content: '\f00c';
 		}
 
@@ -2525,7 +2580,7 @@ input, select, textarea {
 			display: block;
 			background: #ffffff;
 			border-radius: 100%;
-			color: #312450;
+			color: #4E4144;
 			text-align: center;
 			line-height: 2.5em;
 			margin: 0 0 1.3em 0;
@@ -2535,12 +2590,12 @@ input, select, textarea {
 				font-size: 1.25em;
 			}
 
-				.wrapper.style1 .icon.major:before {
+				.wrapper.style1 .icon.major:before { /**colors for... something */
 					color: #5e42a6;
 				}
 
 				.wrapper.style1-alt .icon.major:before {
-					color: #493382;
+					color: #4E4144;
 				}
 
 				.wrapper.style2 .icon.major:before {
@@ -2552,7 +2607,7 @@ input, select, textarea {
 				}
 
 				.wrapper.style3 .icon.major:before {
-					color: #b74e91;
+					/*color: #b74e91;*/ /**icon background color*/
 				}
 
 				.wrapper.style3-alt .icon.major:before {
@@ -2997,6 +3052,7 @@ input, select, textarea {
 		-ms-flex-direction: row;
 		flex-direction: row;
 		min-height: 22.5em;
+        
 	}
 
 		body.is-ie .spotlights > section {
@@ -3064,11 +3120,12 @@ input, select, textarea {
 			}
 
 		.spotlights > section:nth-child(2) {
-			background-color: rgba(0, 0, 0, 0.05);
+			background-color: rgba(0, 0, 0, 0.1);
 		}
 
 		.spotlights > section:nth-child(3) {
-			background-color: rgba(0, 0, 0, 0.1);
+			background-color: rgba(0, 0, 0, 0.2); /**these set a blackness over the box for articles */
+            border-bottom: solid .25em rgba(255,192,57,1);
 		}
 
 		.spotlights > section.inactive > .image:before,
@@ -3240,15 +3297,15 @@ input, select, textarea {
 		}
 
 		.wrapper.style1 {
-			background-color: #5e42a6;
+			background-color: #4E4144; /** get in touch */
 		}
 
 		.wrapper.style1-alt {
-			background-color: #493382;
+			background-color: #68424b; /**footer bottom */
 		}
 
 		.wrapper.style2 {
-			background-color: #5052b5;
+			background-color: #4E4144; /** example articles */
 		}
 
 		.wrapper.style2-alt {
@@ -3256,11 +3313,11 @@ input, select, textarea {
 		}
 
 		.wrapper.style3 {
-			background-color: #b74e91;
+			background-color: #4E4144; /** statement of faith and mission */
 		}
 
 		.wrapper.style3-alt {
-			background-color: #953d75;
+			background-color: #4E4144;
 		}
 
 		.wrapper.fullscreen {
@@ -3370,7 +3427,7 @@ input, select, textarea {
 		display: -webkit-flex;
 		display: -ms-flex;
 		display: flex;
-		background-color: #5e42a6;
+		background-color: #ffffff;
 		cursor: default;
 		padding: 1.75em 2em;
 	}
@@ -3524,7 +3581,7 @@ input, select, textarea {
 
 	#sidebar {
 		padding: 2.5em 2.5em 0.5em 2.5em ;
-		background: #312450;
+		background: #68424b; /** sidebar color */
 		cursor: default;
 		height: 100vh;
 		left: 0;
@@ -3761,14 +3818,14 @@ input, select, textarea {
 			}
 
 			#sidebar nav a:before {
-				background: #3c2c62;
+				background: #68424b; /** THIS COLOR needs to match the sidebar color*/
 			}
 
 			#sidebar nav a:after {
-				background-image: -moz-linear-gradient(to right, #5e42a6, #b74e91);
-				background-image: -webkit-linear-gradient(to right, #5e42a6, #b74e91);
-				background-image: -ms-linear-gradient(to right, #5e42a6, #b74e91);
-				background-image: linear-gradient(to right, #5e42a6, #b74e91);
+				background-image: -moz-linear-gradient(to right, #ffc039, #ffc039); /**these colors are for fullscreen sidebar*/
+				background-image: -webkit-linear-gradient(to right, #ffc039, #ffc039);
+				background-image: -ms-linear-gradient(to right, #ffc039, #ffc039);
+				background-image: linear-gradient(to right, #ffc039, #ffc039);
 				-moz-transition: max-width 0.2s ease;
 				-webkit-transition: max-width 0.2s ease;
 				-ms-transition: max-width 0.2s ease;
@@ -3857,7 +3914,7 @@ input, select, textarea {
 
 						#sidebar nav a:after {
 							background-image: none;
-							background-color: #b74e91;
+							background-color: #ffc039; /**vertical sidebar color*/
 						}
 
 		}
@@ -3874,7 +3931,8 @@ input, select, textarea {
 
 	#intro {
 		background-attachment: fixed;
-		background-image: url("images/intro.svg");
+        background-color: #4E4144; /**main grey*/
+		background-image: url("images/rectangular.png"); /**found the wireframe image images/intro.svg*/
 		background-position: top right;
 		background-repeat: no-repeat;
 		background-size: 100% 100%;
@@ -3904,6 +3962,73 @@ input, select, textarea {
 
 			#intro {
 				background-attachment: scroll;
+                background-image: url("images/covermaybe.png"); /**background image*/
+                background-color: #4E4144
 			}
 
 		}
+
+	.box.highlight {
+		text-align: center;
+        background-color: #4E4144; /**Name box */
+	}
+
+		.box.highlight h2 {
+			font-size: 3em;
+			margin: 0 0 0.25em 0;
+		}
+
+		.box.highlight header > p {
+			font-size: 1.65em;
+			margin: 0 0 1.5em 0;
+		}
+
+	.box.feature {
+		text-align: center;
+	}
+
+	.box.post header {
+		margin: 0 0 2.5em 0;
+	}
+
+	.box.post h3 {
+		font-size: 3em;
+		margin: 0 0 0.25em 0;
+	}
+
+	.box.post header > p {
+		font-size: 1.65em;
+		margin: 0 0 0.5em 0;
+	}
+
+	.box.post ul.meta {
+		margin: 0 0 0.5em 0;
+	}
+
+	.box.post-summary h3 {
+		line-height: 1em;
+		margin: 0 0 0.75em 0;
+	}
+
+	.box.post-summary .meta {
+		margin: 0;
+		line-height: 1em;
+	}
+
+	.box.page-content header {
+		margin: 0 0 2.5em 0;
+	}
+
+	.box.page-content h2 {
+		font-size: 3em;
+		margin: 0 0 0.5em 0;
+	}
+
+	.box.page-content header > p {
+		font-size: 1.65em;
+		margin: 0 0 0.5em 0;
+	}
+
+	.box.page-content ul.meta {
+		margin: 0 0 0.5em 0;
+	}
