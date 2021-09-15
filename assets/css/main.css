@@ -3563,11 +3563,13 @@ input, select, textarea {
 
 		#footer > .inner a:hover {
 			border-bottom-color: transparent;
+            padding-bottom:8px;
 		}
 
 	#footer > .inner .menu {
 		font-size: 0.8em;
 		color: rgba(255, 255, 255, 0.15);
+        padding-bottom:85px;
 	}
 
 	#header + #wrapper + #footer > .inner {
